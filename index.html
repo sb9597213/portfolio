@@ -17,16 +17,12 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{background:var(--bg);color:var(--text);font-family:var(--dm);font-size:16px;line-height:1.7;}
-
-    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;}
     .nav-brand{font-family:var(--nunito);font-size:18px;font-weight:800;color:var(--purple);}
     .nav-brand span{color:var(--coral);}
     .nav-links{display:flex;gap:32px;list-style:none;}
     .nav-links a{font-family:var(--dm);font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
     .nav-links a:hover{color:var(--purple);}
-
-    /* HERO */
     .hero{min-height:100vh;padding:120px 48px 80px;max-width:1060px;margin:0 auto;}
     @media(max-width:768px){.hero{padding:100px 24px 60px;}}
     .hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--purple-lt);border:1px solid var(--border);border-radius:100px;padding:6px 16px;margin-bottom:28px;}
@@ -37,38 +33,26 @@
     .hero h1 span{color:var(--purple);}
     .hero-role{font-family:var(--dm);font-size:18px;font-weight:300;color:var(--muted);margin-bottom:24px;}
     .hero-role strong{color:var(--coral);font-weight:600;}
-
-    /* Transition badge */
     .transition-badge{display:inline-flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px 20px;margin-bottom:28px;}
     .tb-item{font-family:var(--nunito);font-size:13px;font-weight:700;color:var(--text);}
     .tb-arrow{font-size:16px;color:var(--purple);}
     .tb-item.active{color:var(--purple);background:var(--purple-lt);padding:4px 10px;border-radius:6px;}
-
     .hero-bio{font-size:17px;font-weight:300;color:var(--muted);max-width:600px;line-height:1.85;margin-bottom:36px;}
-
-    /* Bento stats */
     .bento{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:36px;}
     @media(max-width:600px){.bento{grid-template-columns:1fr 1fr;}}
     .bento-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;}
     .bento-card.accent{background:var(--purple);border-color:var(--purple);}
-    .bento-card.accent .bento-num{color:#fff;}
-    .bento-card.accent .bento-label{color:rgba(255,255,255,0.75);}
     .bento-num{font-family:var(--nunito);font-size:26px;font-weight:800;color:var(--purple);line-height:1;margin-bottom:4px;}
     .bento-label{font-size:11px;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:0.06em;}
-
     .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
     .btn-primary{font-family:var(--nunito);font-size:14px;font-weight:700;padding:12px 28px;background:var(--purple);color:#fff;border:none;border-radius:10px;text-decoration:none;transition:background 0.2s;}
     .btn-primary:hover{background:var(--purple2);}
     .btn-secondary{font-family:var(--nunito);font-size:14px;font-weight:600;padding:12px 28px;background:transparent;color:var(--purple);border:2px solid var(--border);border-radius:10px;text-decoration:none;transition:all 0.2s;}
     .btn-secondary:hover{border-color:var(--purple);background:var(--purple-lt);}
-
-    /* SECTION */
     .section-wrap{max-width:1060px;margin:0 auto;padding:80px 48px;border-top:1px solid var(--border);}
     @media(max-width:768px){.section-wrap{padding:60px 24px;}}
     .section-eyebrow{font-family:var(--mono);font-size:11px;color:var(--purple);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:10px;}
     .section-title{font-family:var(--nunito);font-size:36px;font-weight:800;letter-spacing:-0.02em;margin-bottom:36px;color:var(--text);}
-
-    /* VALUE PROP */
     .vp-stack{display:flex;flex-direction:column;gap:16px;}
     .vp-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px;}
     .vp-card.main{border-left:4px solid var(--purple);}
@@ -78,8 +62,6 @@
     .vp-card p{font-size:15px;color:var(--muted);line-height:1.8;}
     .vp-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
     @media(max-width:600px){.vp-row{grid-template-columns:1fr;}}
-
-    /* SKILLS */
     .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:32px;}
     .skill-group{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px;}
     .skill-group h4{font-family:var(--mono);font-size:10px;color:var(--purple);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
@@ -87,10 +69,9 @@
     .tag{font-family:var(--mono);font-size:10px;padding:3px 8px;background:#fff;border:1px solid var(--border);border-radius:6px;color:var(--muted);}
     .tag.purple{background:var(--purple-lt);border-color:var(--border);color:var(--purple);}
     .tag.coral{background:var(--coral-lt);border-color:#fecdd3;color:var(--coral);}
-
-    /* ARTIFACT */
-    .artifact{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+    .artifact{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:32px;}
     .artifact-header{background:var(--purple);padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;}
+    .artifact-header.coral-header{background:linear-gradient(135deg,var(--coral),#e11d48);}
     .artifact-num{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:4px;}
     .artifact-title{font-family:var(--nunito);font-size:22px;font-weight:800;color:#fff;line-height:1.2;}
     .artifact-badge{font-family:var(--mono);font-size:10px;padding:4px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:100px;color:#fff;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
@@ -103,20 +84,26 @@
     .artifact-rule{border:none;border-top:1px solid var(--border);margin:24px 0;}
     .tool-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
     .tool-tag{font-family:var(--mono);font-size:10px;padding:3px 10px;background:var(--purple-lt);border:1px solid var(--border);border-radius:6px;color:var(--purple);}
+    .tool-tag.coral{background:var(--coral-lt);border-color:#fecdd3;color:var(--coral);}
     .vp-block{background:linear-gradient(135deg,var(--purple-lt),#fff);border:1px solid var(--border);border-left:4px solid var(--purple);padding:20px 24px;border-radius:10px;margin-bottom:16px;}
     .vp-block .meta-label{color:var(--purple);}
     .vp-block .meta-text{color:#5b21b6;}
     .relevance-block{background:var(--coral-lt);border:1px solid #fecdd3;border-left:4px solid var(--coral);padding:20px 24px;border-radius:10px;}
     .relevance-block .meta-label{color:var(--coral);}
     .relevance-block .meta-text{color:#9f1239;}
-
-    /* Process steps */
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+    @media(max-width:600px){.compare-grid{grid-template-columns:1fr;}}
+    .compare-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;}
+    .compare-card h5{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border);}
+    .compare-card h5.suitable{color:var(--purple);}
+    .compare-card h5.not{color:var(--coral);}
+    .compare-card p{font-size:12px;color:var(--muted);line-height:1.6;}
+    .ref-block{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-top:16px;}
+    .ref-block p{font-family:var(--mono);font-size:11px;color:var(--light);line-height:1.8;}
     .process-steps{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
     .process-step{display:flex;gap:12px;align-items:flex-start;}
     .step-num{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--purple);background:var(--purple-lt);border:1px solid var(--border);width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
     .step-text{font-size:13px;color:var(--muted);line-height:1.6;}
-
-    /* EXPERIENCE */
     .exp-item{padding:28px 0;border-bottom:1px solid var(--border);}
     .exp-item:last-child{border-bottom:none;}
     .exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
@@ -127,23 +114,17 @@
     .exp-bullets{list-style:none;margin-top:10px;}
     .exp-bullets li{font-size:14px;color:var(--muted);padding:3px 0 3px 18px;position:relative;line-height:1.6;}
     .exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--purple);font-size:12px;top:5px;}
-
-    /* EDU */
     .edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
     .edu-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;}
     .edu-degree{font-family:var(--nunito);font-size:15px;font-weight:700;margin-bottom:4px;}
     .edu-school{font-size:13px;color:var(--purple);font-weight:600;}
     .edu-year{font-family:var(--mono);font-size:10px;color:var(--light);margin-top:4px;}
-
-    /* CONTACT */
     .contact-card{background:linear-gradient(135deg,var(--purple),#9d5ff5);border-radius:16px;padding:48px;color:#fff;}
     .contact-card h3{font-family:var(--nunito);font-size:32px;font-weight:800;color:#fff;margin-bottom:12px;}
     .contact-card p{font-size:15px;color:rgba(255,255,255,0.8);margin-bottom:28px;max-width:520px;line-height:1.8;}
     .contact-links{display:flex;gap:12px;flex-wrap:wrap;}
     .contact-link{font-family:var(--nunito);font-size:13px;font-weight:700;padding:10px 20px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:10px;color:#fff;text-decoration:none;transition:background 0.2s;}
     .contact-link:hover{background:rgba(255,255,255,0.25);}
-
-    /* FOOTER */
     footer{border-top:1px solid var(--border);padding:24px 48px;max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
     .footer-text{font-family:var(--mono);font-size:11px;color:var(--light);}
     .footer-links{display:flex;gap:20px;}
@@ -153,7 +134,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <span class="nav-brand">Swathi<span>.</span>B</span>
   <ul class="nav-links">
@@ -165,51 +145,28 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero" id="about">
-  <div class="hero-pill">
-    <span class="hero-pill-dot"></span>
-    <span class="hero-pill-text">AIML-501 Professional Portfolio — Indiana Wesleyan University</span>
-  </div>
+  <div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AIML-501 Professional Portfolio — Indiana Wesleyan University</span></div>
   <h1>Swathi<br><span>B</span></h1>
   <p class="hero-role">Business Analytics → <strong>AI/ML Integration Leader</strong></p>
-
   <div class="transition-badge">
-    <span class="tb-item">Business Analytics</span>
-    <span class="tb-arrow">→</span>
-    <span class="tb-item">Data Science</span>
-    <span class="tb-arrow">→</span>
+    <span class="tb-item">Business Analytics</span><span class="tb-arrow">→</span>
+    <span class="tb-item">Data Science</span><span class="tb-arrow">→</span>
     <span class="tb-item active">AI/ML Leader</span>
   </div>
-
   <p class="hero-bio">Bridging the gap between business strategy and AI capability. I bring a practical, industry-focused perspective to machine learning — connecting what AI can do with what organizations actually need.</p>
-
   <div class="bento">
-    <div class="bento-card accent">
-      <div class="bento-num" style="color:#fff;">AI/ML</div>
-      <div class="bento-label" style="color:rgba(255,255,255,0.75);">Graduate Student</div>
-    </div>
-    <div class="bento-card">
-      <div class="bento-num">3+</div>
-      <div class="bento-label">Tools Built</div>
-    </div>
-    <div class="bento-card">
-      <div class="bento-num">6</div>
-      <div class="bento-label">AI Tools Used</div>
-    </div>
-    <div class="bento-card">
-      <div class="bento-num">IWU</div>
-      <div class="bento-label">MS Program</div>
-    </div>
+    <div class="bento-card accent"><div class="bento-num" style="color:#fff;">AI/ML</div><div class="bento-label" style="color:rgba(255,255,255,0.75);">Graduate Student</div></div>
+    <div class="bento-card"><div class="bento-num">3+</div><div class="bento-label">Tools Built</div></div>
+    <div class="bento-card"><div class="bento-num">6</div><div class="bento-label">AI Tools Used</div></div>
+    <div class="bento-card"><div class="bento-num">IWU</div><div class="bento-label">MS Program</div></div>
   </div>
-
   <div class="hero-cta">
     <a href="#artifacts" class="btn-primary">View Artifacts</a>
     <a href="#contact" class="btn-secondary">Get In Touch</a>
   </div>
 </div>
 
-<!-- VALUE PROPOSITION -->
 <section class="section-wrap" id="value">
   <p class="section-eyebrow">01 — Who I Am</p>
   <h2 class="section-title">Personal Value Proposition</h2>
@@ -229,65 +186,22 @@
       </div>
     </div>
   </div>
-
-  <!-- SKILLS -->
   <p class="section-eyebrow" style="margin-top:48px;">Technical Stack</p>
   <div class="skills-grid">
-    <div class="skill-group">
-      <h4>Business & Analytics</h4>
-      <div class="tags">
-        <span class="tag purple">Business Analytics</span>
-        <span class="tag purple">Data Analysis</span>
-        <span class="tag purple">Strategy</span>
-        <span class="tag purple">Stakeholder Comm.</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>AI/ML Tools</h4>
-      <div class="tags">
-        <span class="tag purple">Claude AI</span>
-        <span class="tag purple">ChatGPT</span>
-        <span class="tag purple">STORM AI</span>
-        <span class="tag purple">Canva GPT</span>
-        <span class="tag purple">Chatbase.co</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>AI/ML In Development</h4>
-      <div class="tags">
-        <span class="tag coral">ML Fundamentals</span>
-        <span class="tag coral">Prompt Engineering</span>
-        <span class="tag coral">Chatbot Design</span>
-        <span class="tag coral">AI Ethics</span>
-        <span class="tag coral">Design Thinking</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>Design & Communication</h4>
-      <div class="tags">
-        <span class="tag">Canva</span>
-        <span class="tag">Visual Storytelling</span>
-        <span class="tag">Infographic Design</span>
-        <span class="tag">Presentation</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>Professional Tools</h4>
-      <div class="tags">
-        <span class="tag">Microsoft Office</span>
-        <span class="tag">Google Workspace</span>
-        <span class="tag">GitHub Pages</span>
-      </div>
-    </div>
+    <div class="skill-group"><h4>Business & Analytics</h4><div class="tags"><span class="tag purple">Business Analytics</span><span class="tag purple">Data Analysis</span><span class="tag purple">Strategy</span><span class="tag purple">Stakeholder Comm.</span></div></div>
+    <div class="skill-group"><h4>AI/ML Tools</h4><div class="tags"><span class="tag purple">Claude AI</span><span class="tag purple">ChatGPT</span><span class="tag purple">STORM AI</span><span class="tag purple">Canva GPT</span><span class="tag purple">Chatbase.co</span></div></div>
+    <div class="skill-group"><h4>AI/ML In Development</h4><div class="tags"><span class="tag coral">ML Fundamentals</span><span class="tag coral">Prompt Engineering</span><span class="tag coral">Chatbot Design</span><span class="tag coral">AI Ethics</span><span class="tag coral">Design Thinking</span></div></div>
+    <div class="skill-group"><h4>Design & Communication</h4><div class="tags"><span class="tag">Canva</span><span class="tag">Visual Storytelling</span><span class="tag">Infographic Design</span><span class="tag">Presentation</span></div></div>
+    <div class="skill-group"><h4>Professional Tools</h4><div class="tags"><span class="tag">Microsoft Office</span><span class="tag">Google Workspace</span><span class="tag">GitHub Pages</span></div></div>
   </div>
 </section>
 
-<!-- ARTIFACTS -->
 <section class="section-wrap" id="artifacts">
   <p class="section-eyebrow">02 — Course Work</p>
   <h2 class="section-title">Portfolio Artifacts</h2>
-  <p style="color:var(--muted);font-size:13px;margin-bottom:36px;font-family:var(--mono);">AIML-501 — Model Development | Indiana Wesleyan University | Workshop 1</p>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:36px;font-family:var(--mono);">AIML-501 — Model Development | Indiana Wesleyan University</p>
 
+  <!-- ARTIFACT 1 -->
   <div class="artifact">
     <div class="artifact-header">
       <div>
@@ -297,41 +211,94 @@
       <span class="artifact-badge">AI Lab</span>
     </div>
     <div class="artifact-body">
-      <p class="artifact-intro">A hands-on AI lab documenting the end-to-end experience of exploring LLMs, Custom GPTs, and research AI tools, culminating in the design and build of a working AI chatbot — "Nav," an AI Career Navigator — built on Chatbase.co. For an audience of business leaders and technology professionals, this artifact answers: can this person use AI tools purposefully to solve a real human problem?</p>
+      <p class="artifact-intro">A hands-on AI lab documenting the end-to-end experience of exploring LLMs, Custom GPTs, and research AI tools, culminating in the design and build of Nav — an AI Career Navigator built on Chatbase.co. This artifact demonstrates the ability to use AI tools purposefully to solve a real human problem.</p>
+      <div class="artifact-grid">
+        <div>
+          <p class="meta-label">Objective</p>
+          <p class="meta-text">To gain direct hands-on experience with multiple AI tools and apply a Design Thinking framework to build a functional AI career advisor that helps people navigate the overwhelming world of AI career paths in a warm, personalized way.</p>
+        </div>
+        <div>
+          <p class="meta-label">Description</p>
+          <p class="meta-text">Nav is a warm, encouraging AI chatbot that guides users through exploring AI career paths based on their background, interests, and goals — asking one question at a time and delivering a maximum of two personalized career path recommendations with one concrete first action step.</p>
+        </div>
+      </div>
+      <div style="margin-bottom:24px;">
+        <p class="meta-label">Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num">1</span><p class="step-text"><strong style="color:var(--text);">LLM Practice (Claude):</strong> Ran a 6-month ML career roadmap prompt across 3 separate conversations. Key lesson: run multiple chats and combine the best elements from each.</p></div>
+          <div class="process-step"><span class="step-num">2</span><p class="step-text"><strong style="color:var(--text);">Custom GPT (Canva):</strong> Used Canva GPT to design an AI career roadmap infographic — every recommendation grounded in design reasoning.</p></div>
+          <div class="process-step"><span class="step-num">3</span><p class="step-text"><strong style="color:var(--text);">STORM AI:</strong> Researched AI in Talent Acquisition — multi-perspective approach produced a balanced article including the Amazon scrapped AI recruiting tool case study.</p></div>
+          <div class="process-step"><span class="step-num">4</span><p class="step-text"><strong style="color:var(--text);">Design Thinking:</strong> Empathy — career changer overwhelmed by AI options. Define — need a judgment-free guide. Ideate — conversational advisor. Prototype — Nav on Chatbase.co. Test — three user backgrounds.</p></div>
+          <div class="process-step"><span class="step-num">5</span><p class="step-text"><strong style="color:var(--text);">Build & Iterate:</strong> Three iterations — added warmth, transferable skills celebration, and step-by-step conversation flow.</p></div>
+        </div>
+      </div>
+      <hr class="artifact-rule">
+      <div style="margin-bottom:20px;">
+        <p class="meta-label">Tools & Technologies</p>
+        <div class="tool-tags"><span class="tool-tag">Claude AI</span><span class="tool-tag">Canva GPT</span><span class="tool-tag">STORM AI</span><span class="tool-tag">Chatbase.co</span><span class="tool-tag">Design Thinking</span><span class="tool-tag">Prompt Engineering</span></div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <p class="meta-label">Try Nav Here</p>
+        <a href="https://www.chatbase.co/ABgUlgyB1kx15Kns8rM9o/help" target="_blank" style="font-family:var(--nunito);font-size:13px;font-weight:700;color:var(--purple);text-decoration:none;background:var(--purple-lt);padding:8px 16px;border-radius:8px;border:1px solid var(--border);display:inline-block;">🤖 Open AI Career Navigator →</a>
+      </div>
+      <div class="vp-block">
+        <p class="meta-label">Value Proposition</p>
+        <p class="meta-text">For organizations evaluating AI/ML talent from non-traditional backgrounds, this artifact demonstrates the ability to identify a real user need, select the right tools, design a human-centered solution, and iterate toward something genuinely useful.</p>
+      </div>
+      <div class="relevance-block">
+        <p class="meta-label">Relevance</p>
+        <p class="meta-text">The professionals who create the most value with AI are those who connect AI capability to human needs. Nav demonstrates exactly that connection — and building it gave me a practical foundation for leading AI adoption in any organizational context.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTIFACT 2 -->
+  <div class="artifact">
+    <div class="artifact-header coral-header">
+      <div>
+        <p class="artifact-num">Artifact 02 — Workshop 2 — Assignment 2.3</p>
+        <p class="artifact-title">ML vs. Deep Learning — A Business Analyst's Real-World Comparison</p>
+      </div>
+      <span class="artifact-badge">Written Analysis</span>
+    </div>
+    <div class="artifact-body">
+      <p class="artifact-intro">A comparative analysis of machine learning and deep learning through two industry-defining real-world applications — Gmail's spam filter (Logistic Regression) and Google Translate (Transformer models). Written from a business analytics perspective that asks not just "which model works better" but "which model is right for this business problem and this audience."</p>
 
       <div class="artifact-grid">
         <div>
           <p class="meta-label">Objective</p>
-          <p class="meta-text">To gain direct hands-on experience with multiple AI tools and apply a Design Thinking framework to build a functional, purpose-built AI career advisor that helps people navigate the overwhelming world of AI career paths in a warm, personalized way.</p>
+          <p class="meta-text">To demonstrate the ability to differentiate between ML and DL approaches by grounding the comparison in real business applications that technology leaders and product managers recognize — making the technical distinction immediately relevant to practical decision-making.</p>
         </div>
         <div>
           <p class="meta-label">Description</p>
-          <p class="meta-text">Nav is a warm, encouraging AI chatbot that guides users through exploring AI career paths based on their current background, interests, and goals. Rather than overwhelming users with options, Nav asks one question at a time and delivers a maximum of two personalized career path recommendations with one concrete first action step.</p>
+          <p class="meta-text">The analysis examines Gmail's use of Logistic Regression for spam detection — where known features and interpretability needs make traditional ML ideal — and Google Translate's use of Transformer models — where the contextual complexity of language translation across 100+ languages makes deep learning the only viable approach.</p>
         </div>
       </div>
 
       <div style="margin-bottom:24px;">
-        <p class="meta-label">Process</p>
-        <div class="process-steps">
-          <div class="process-step">
-            <span class="step-num">1</span>
-            <p class="step-text"><strong style="color:var(--text);">LLM Practice (Claude):</strong> Ran a 6-month ML career roadmap prompt across 3 separate Claude conversations. Chat 1 gave a clean month-by-month plan. Chat 2 asked a clarifying question first — producing more personalized output. Chat 3 was the most resource-heavy. Key lesson: run multiple chats and combine the best elements from each.</p>
+        <p class="meta-label">Case Study 1 — ML: Gmail Spam Detection (Logistic Regression)</p>
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h5 class="suitable">✓ Why ML is Suitable</h5>
+            <p>Binary classification task with well-understood, human-definable features — keyword frequency, sender reputation, link density. Fast, scalable, and interpretable. Google can explain to users why an email was flagged, building trust. Billions of labeled training examples make it continuously improving without DL overhead (Amazon, n.d.).</p>
           </div>
-          <div class="process-step">
-            <span class="step-num">2</span>
-            <p class="step-text"><strong style="color:var(--text);">Custom GPT (Canva):</strong> Used Canva GPT to design an AI career roadmap infographic. It recommended color palettes, justified typography choices using design principles, and adapted to my minimalist preferences. Every recommendation was grounded in design reasoning — felt like consulting a professional designer.</p>
+          <div class="compare-card">
+            <h5 class="not">✗ Why Deep Learning is NOT Suitable</h5>
+            <p>Spam detection does not require automatic feature discovery — the features are already known. A deep neural network would waste computational resources, produce less interpretable results, and likely not outperform Logistic Regression on this structured, well-labeled classification task.</p>
           </div>
-          <div class="process-step">
-            <span class="step-num">3</span>
-            <p class="step-text"><strong style="color:var(--text);">STORM AI:</strong> Researched AI in Talent Acquisition. STORM approached the topic from employer, candidate, regulatory, and ethical perspectives simultaneously — producing a balanced article that included the Amazon scrapped AI recruiting tool case study and EU AI Act implications.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:24px;">
+        <p class="meta-label">Case Study 2 — Deep Learning: Google Translate (Transformer)</p>
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h5 class="suitable">✓ Why DL is Suitable</h5>
+            <p>Language translation requires understanding context, meaning, and linguistic nuance across 100+ language pairs. Transformer models automatically learn representations through self-attention mechanisms — enabling contextually accurate translations that no human could manually engineer features for (Illing, 2024).</p>
           </div>
-          <div class="process-step">
-            <span class="step-num">4</span>
-            <p class="step-text"><strong style="color:var(--text);">Design Thinking:</strong> Empathy — career changer overwhelmed by AI options. Define — they need a judgment-free, personalized guide, not another resource list. Ideate — conversational advisor beats quiz bot. Prototype — Nav on Chatbase.co. Test — three user backgrounds: marketing, nursing, CS grad.</p>
-          </div>
-          <div class="process-step">
-            <span class="step-num">5</span>
-            <p class="step-text"><strong style="color:var(--text);">Build & Iterate:</strong> Iteration 1 — Nav was too formal and robotic. Iteration 2 — Added explicit warmth and instructions to celebrate transferable skills. Iteration 3 — Added step-by-step conversation flow to prevent Nav from jumping to conclusions before fully understanding the user.</p>
+          <div class="compare-card">
+            <h5 class="not">✗ Why Traditional ML is NOT Suitable</h5>
+            <p>ML would require manually engineering thousands of keyword features for every language pair — a brittle, impossible approach that cannot capture long-range dependencies or the kind of linguistic nuance that determines meaning in natural language translation.</p>
           </div>
         </div>
       </div>
@@ -339,53 +306,48 @@
       <hr class="artifact-rule">
 
       <div style="margin-bottom:20px;">
-        <p class="meta-label">Tools & Technologies</p>
+        <p class="meta-label">Concepts Demonstrated</p>
         <div class="tool-tags">
-          <span class="tool-tag">Claude AI</span>
-          <span class="tool-tag">Canva GPT</span>
-          <span class="tool-tag">STORM AI</span>
-          <span class="tool-tag">Chatbase.co</span>
-          <span class="tool-tag">Design Thinking</span>
-          <span class="tool-tag">Prompt Engineering</span>
+          <span class="tool-tag">Supervised Learning</span>
+          <span class="tool-tag">Logistic Regression</span>
+          <span class="tool-tag coral">Transformer Architecture</span>
+          <span class="tool-tag coral">Natural Language Processing</span>
+          <span class="tool-tag">Feature Engineering</span>
+          <span class="tool-tag">Model Interpretability</span>
         </div>
-      </div>
-
-      <div style="margin-bottom:16px;">
-        <p class="meta-label">Try Nav Here</p>
-        <a href="https://www.chatbase.co/ABgUlgyB1kx15Kns8rM9o/help" target="_blank" style="font-family:var(--nunito);font-size:13px;font-weight:700;color:var(--purple);text-decoration:none;background:var(--purple-lt);padding:8px 16px;border-radius:8px;border:1px solid var(--border);display:inline-block;">
-          🤖 Open AI Career Navigator →
-        </a>
       </div>
 
       <div class="vp-block">
         <p class="meta-label">Value Proposition</p>
-        <p class="meta-text">For organizations evaluating AI/ML talent from non-traditional backgrounds, this artifact demonstrates something more valuable than technical credentials alone — the ability to identify a real user need, select the right tools, design a human-centered solution, and iterate toward something genuinely useful. Nav is a bot I would share with friends who ask me how to get into AI. That is the real measure of whether it works.</p>
+        <p class="meta-text">For technology leaders and product managers, this artifact demonstrates the analytical thinking required to select the right AI approach for a given business problem — not just the most impressive one. Gmail and Google Translate are tools that billions of people use daily. Understanding why each uses a fundamentally different AI architecture — and being able to explain that difference to a non-technical audience — is exactly the kind of business-focused AI literacy that my target audience needs in their teams.</p>
       </div>
 
       <div style="margin:16px 0;">
         <p class="meta-label">Unique Value</p>
-        <p class="meta-text">My business analytics background shaped Nav's design in a way a purely technical student would not have approached it. I thought first about the user experience — the confusion, the overwhelm, the need for encouragement — and let that drive every technical decision. That business-first, human-centered thinking is exactly what organizations need when deploying AI tools that real people have to use.</p>
+        <p class="meta-text">My business analytics background shaped this analysis around a question technical analysts often skip: interpretability. For Gmail, the ability to explain why an email was flagged is not just a nice feature — it is a trust and compliance requirement. Framing that interpretability need as a business constraint — not just a technical preference — is something a business analyst brings to AI decision-making that a pure ML engineer might miss.</p>
       </div>
 
       <div class="relevance-block">
         <p class="meta-label">Relevance</p>
-        <p class="meta-text">As AI tools proliferate across every industry, the professionals who will create the most value are not those who understand AI in isolation but those who can connect AI capability to human needs. Nav demonstrates exactly that connection — and the process of building it gave me a practical foundation for leading AI adoption in any organizational context.</p>
+        <p class="meta-text">Every organization deploying AI will face the ML vs. DL decision — for customer segmentation, for content moderation, for translation, for recommendation. The ability to match the right approach to the right problem, explain that decision to stakeholders, and avoid over-engineering for the sake of technical sophistication is what makes AI initiatives succeed in practice rather than just in theory.</p>
+      </div>
+
+      <div class="ref-block">
+        <p class="meta-label" style="margin-bottom:8px;">References</p>
+        <p>Amazon. (n.d.). <em>What is machine learning?</em> AWS. https://aws.amazon.com/what-is/machine-learning/</p>
+        <p>Illing, S. (2024, September 20). A beginner's guide to understanding natural language processing with GPT. <em>MaestroLabs</em>. https://www.maestrolabs.com/blog-detail/beginners-guide-to-understanding-natural-language-processing-with-gpt</p>
+        <p>Trojahn, M., & Costa, B. (2024, August 28). What are the differences between AI, ML, DL, and Gen AI? <em>E-core</em>. https://www.e-core.com/na-en/articles/differences-between-ai-ml-dl-gen-ai/</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section class="section-wrap" id="experience">
   <p class="section-eyebrow">03 — Background</p>
   <h2 class="section-title">Education & Background</h2>
-
   <div class="exp-item">
     <div class="exp-top">
-      <div>
-        <p class="exp-role">Graduate Student — <span class="exp-company">Indiana Wesleyan University</span></p>
-        <p class="exp-loc">MS in AI & Machine Learning</p>
-      </div>
+      <div><p class="exp-role">Graduate Student — <span class="exp-company">Indiana Wesleyan University</span></p><p class="exp-loc">MS in AI & Machine Learning</p></div>
       <span class="exp-date">2025 — Present</span>
     </div>
     <ul class="exp-bullets">
@@ -395,18 +357,12 @@
       <li>Developing professional portfolio demonstrating practical AI/ML capabilities.</li>
     </ul>
   </div>
-
   <p class="section-eyebrow" style="margin-top:40px;margin-bottom:20px;">Education</p>
   <div class="edu-grid">
-    <div class="edu-card">
-      <p class="edu-degree">MS in AI & Machine Learning</p>
-      <p class="edu-school">Indiana Wesleyan University</p>
-      <p class="edu-year">2025 — Present</p>
-    </div>
+    <div class="edu-card"><p class="edu-degree">MS in AI & Machine Learning</p><p class="edu-school">Indiana Wesleyan University</p><p class="edu-year">2025 — Present</p></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section-wrap" id="contact">
   <p class="section-eyebrow">04 — Get In Touch</p>
   <h2 class="section-title">Contact</h2>
@@ -420,14 +376,9 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p class="footer-text">© 2025 Swathi B — AIML-501 Portfolio | Indiana Wesleyan University</p>
-  <div class="footer-links">
-    <a href="#about">Top</a>
-    <a href="#artifacts">Artifacts</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <div class="footer-links"><a href="#about">Top</a><a href="#artifacts">Artifacts</a><a href="#contact">Contact</a></div>
 </footer>
 
 </body>
