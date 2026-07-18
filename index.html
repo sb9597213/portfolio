@@ -11,6 +11,7 @@
       --bg:#ffffff;--bg2:#f8f7ff;--bg3:#f1f0fe;--border:#e5e3f7;
       --purple:#7c3aed;--purple2:#9d5ff5;--purple-lt:#ede9fe;
       --coral:#f43f5e;--coral-lt:#fff1f3;
+      --teal:#0d9488;--teal-lt:rgba(13,148,136,0.08);
       --text:#1a1523;--muted:#6b7280;--light:#9ca3af;
       --nunito:'Nunito',sans-serif;--dm:'DM Sans',sans-serif;--mono:'DM Mono',monospace;
     }
@@ -69,9 +70,11 @@
     .tag{font-family:var(--mono);font-size:10px;padding:3px 8px;background:#fff;border:1px solid var(--border);border-radius:6px;color:var(--muted);}
     .tag.purple{background:var(--purple-lt);border-color:var(--border);color:var(--purple);}
     .tag.coral{background:var(--coral-lt);border-color:#fecdd3;color:var(--coral);}
+    .tag.teal{background:var(--teal-lt);border-color:rgba(13,148,136,0.2);color:var(--teal);}
     .artifact{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:32px;}
     .artifact-header{background:var(--purple);padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;}
     .artifact-header.coral-header{background:linear-gradient(135deg,var(--coral),#e11d48);}
+    .artifact-header.teal-header{background:linear-gradient(135deg,#0d9488,#0f766e);}
     .artifact-num{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:4px;}
     .artifact-title{font-family:var(--nunito);font-size:22px;font-weight:800;color:#fff;line-height:1.2;}
     .artifact-badge{font-family:var(--mono);font-size:10px;padding:4px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:100px;color:#fff;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
@@ -85,12 +88,19 @@
     .tool-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
     .tool-tag{font-family:var(--mono);font-size:10px;padding:3px 10px;background:var(--purple-lt);border:1px solid var(--border);border-radius:6px;color:var(--purple);}
     .tool-tag.coral{background:var(--coral-lt);border-color:#fecdd3;color:var(--coral);}
+    .tool-tag.teal{background:var(--teal-lt);border-color:rgba(13,148,136,0.2);color:var(--teal);}
     .vp-block{background:linear-gradient(135deg,var(--purple-lt),#fff);border:1px solid var(--border);border-left:4px solid var(--purple);padding:20px 24px;border-radius:10px;margin-bottom:16px;}
     .vp-block .meta-label{color:var(--purple);}
     .vp-block .meta-text{color:#5b21b6;}
+    .vp-block.teal{background:linear-gradient(135deg,var(--teal-lt),#fff);border-left-color:var(--teal);}
+    .vp-block.teal .meta-label{color:var(--teal);}
+    .vp-block.teal .meta-text{color:#0f766e;}
     .relevance-block{background:var(--coral-lt);border:1px solid #fecdd3;border-left:4px solid var(--coral);padding:20px 24px;border-radius:10px;}
     .relevance-block .meta-label{color:var(--coral);}
     .relevance-block .meta-text{color:#9f1239;}
+    .relevance-block.teal{background:var(--teal-lt);border-color:rgba(13,148,136,0.2);border-left-color:var(--teal);}
+    .relevance-block.teal .meta-label{color:var(--teal);}
+    .relevance-block.teal .meta-text{color:#0f766e;}
     .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
     @media(max-width:600px){.compare-grid{grid-template-columns:1fr;}}
     .compare-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px;}
@@ -103,7 +113,17 @@
     .process-steps{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
     .process-step{display:flex;gap:12px;align-items:flex-start;}
     .step-num{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--purple);background:var(--purple-lt);border:1px solid var(--border);width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+    .step-num.teal{color:var(--teal);background:var(--teal-lt);border-color:rgba(13,148,136,0.2);}
     .step-text{font-size:13px;color:var(--muted);line-height:1.6;}
+    .explanation-box{background:#fff;border:1px solid var(--border);border-radius:10px;padding:24px;margin-top:8px;}
+    .explanation-box p{font-size:14px;color:var(--text);line-height:1.8;margin-bottom:10px;}
+    .explanation-box p:last-child{margin-bottom:0;}
+    .explanation-box .highlight{color:var(--teal);font-weight:600;}
+    .strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;}
+    @media(max-width:600px){.strategy-grid{grid-template-columns:1fr;}}
+    .strategy-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px;}
+    .strategy-card h6{font-family:var(--mono);font-size:10px;color:var(--teal);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
+    .strategy-card p{font-size:12px;color:var(--muted);line-height:1.5;}
     .exp-item{padding:28px 0;border-bottom:1px solid var(--border);}
     .exp-item:last-child{border-bottom:none;}
     .exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
@@ -157,7 +177,7 @@
   <p class="hero-bio">Bridging the gap between business strategy and AI capability. I bring a practical, industry-focused perspective to machine learning — connecting what AI can do with what organizations actually need.</p>
   <div class="bento">
     <div class="bento-card accent"><div class="bento-num" style="color:#fff;">AI/ML</div><div class="bento-label" style="color:rgba(255,255,255,0.75);">Graduate Student</div></div>
-    <div class="bento-card"><div class="bento-num">3+</div><div class="bento-label">Tools Built</div></div>
+    <div class="bento-card"><div class="bento-num">3+</div><div class="bento-label">Artifacts Built</div></div>
     <div class="bento-card"><div class="bento-num">6</div><div class="bento-label">AI Tools Used</div></div>
     <div class="bento-card"><div class="bento-num">IWU</div><div class="bento-label">MS Program</div></div>
   </div>
@@ -167,6 +187,7 @@
   </div>
 </div>
 
+<!-- VALUE PROPOSITION -->
 <section class="section-wrap" id="value">
   <p class="section-eyebrow">01 — Who I Am</p>
   <h2 class="section-title">Personal Value Proposition</h2>
@@ -178,11 +199,11 @@
     <div class="vp-row">
       <div class="vp-card main">
         <h3>Target Audience</h3>
-        <p>Technology leaders, product managers, and organizations in retail, healthcare, and enterprise software who need AI/ML solutions that are clearly communicated, practically implemented, and aligned with real business outcomes — not just impressive in demos.</p>
+        <p>Technology leaders, product managers, and organizations in retail, healthcare, and enterprise software who need AI/ML solutions that are clearly communicated, practically implemented, and aligned with real business outcomes.</p>
       </div>
       <div class="vp-card coral">
         <h3>Unique Differentiator</h3>
-        <p>Most AI/ML candidates come from pure technical backgrounds. I come from business analytics — which means I understand the questions organizations are actually trying to answer before I start thinking about which model to build.</p>
+        <p>Most AI/ML candidates come from pure technical backgrounds. I come from business analytics — which means I understand the questions organizations are actually trying to answer before thinking about which model to build.</p>
       </div>
     </div>
   </div>
@@ -190,12 +211,13 @@
   <div class="skills-grid">
     <div class="skill-group"><h4>Business & Analytics</h4><div class="tags"><span class="tag purple">Business Analytics</span><span class="tag purple">Data Analysis</span><span class="tag purple">Strategy</span><span class="tag purple">Stakeholder Comm.</span></div></div>
     <div class="skill-group"><h4>AI/ML Tools</h4><div class="tags"><span class="tag purple">Claude AI</span><span class="tag purple">ChatGPT</span><span class="tag purple">STORM AI</span><span class="tag purple">Canva GPT</span><span class="tag purple">Chatbase.co</span></div></div>
-    <div class="skill-group"><h4>AI/ML In Development</h4><div class="tags"><span class="tag coral">ML Fundamentals</span><span class="tag coral">Prompt Engineering</span><span class="tag coral">Chatbot Design</span><span class="tag coral">AI Ethics</span><span class="tag coral">Design Thinking</span></div></div>
-    <div class="skill-group"><h4>Design & Communication</h4><div class="tags"><span class="tag">Canva</span><span class="tag">Visual Storytelling</span><span class="tag">Infographic Design</span><span class="tag">Presentation</span></div></div>
+    <div class="skill-group"><h4>AI/ML In Development</h4><div class="tags"><span class="tag coral">ML Fundamentals</span><span class="tag coral">Deep Learning</span><span class="tag coral">Neural Networks</span><span class="tag coral">Prompt Engineering</span><span class="tag coral">AI Ethics</span></div></div>
+    <div class="skill-group"><h4>Communication & Design</h4><div class="tags"><span class="tag teal">AI Explainability</span><span class="tag teal">Visual Storytelling</span><span class="tag teal">Canva</span><span class="tag teal">Infographic Design</span></div></div>
     <div class="skill-group"><h4>Professional Tools</h4><div class="tags"><span class="tag">Microsoft Office</span><span class="tag">Google Workspace</span><span class="tag">GitHub Pages</span></div></div>
   </div>
 </section>
 
+<!-- ARTIFACTS -->
 <section class="section-wrap" id="artifacts">
   <p class="section-eyebrow">02 — Course Work</p>
   <h2 class="section-title">Portfolio Artifacts</h2>
@@ -211,44 +233,24 @@
       <span class="artifact-badge">AI Lab</span>
     </div>
     <div class="artifact-body">
-      <p class="artifact-intro">A hands-on AI lab documenting the end-to-end experience of exploring LLMs, Custom GPTs, and research AI tools, culminating in the design and build of Nav — an AI Career Navigator built on Chatbase.co. This artifact demonstrates the ability to use AI tools purposefully to solve a real human problem.</p>
+      <p class="artifact-intro">A hands-on AI lab documenting the end-to-end experience of exploring LLMs, Custom GPTs, and research AI tools, culminating in the design and build of Nav — an AI Career Navigator built on Chatbase.co. Demonstrates the ability to use AI tools purposefully to solve a real human problem.</p>
       <div class="artifact-grid">
-        <div>
-          <p class="meta-label">Objective</p>
-          <p class="meta-text">To gain direct hands-on experience with multiple AI tools and apply a Design Thinking framework to build a functional AI career advisor that helps people navigate the overwhelming world of AI career paths in a warm, personalized way.</p>
-        </div>
-        <div>
-          <p class="meta-label">Description</p>
-          <p class="meta-text">Nav is a warm, encouraging AI chatbot that guides users through exploring AI career paths based on their background, interests, and goals — asking one question at a time and delivering a maximum of two personalized career path recommendations with one concrete first action step.</p>
-        </div>
+        <div><p class="meta-label">Objective</p><p class="meta-text">To gain direct hands-on experience with multiple AI tools and apply Design Thinking to build a functional AI career advisor that helps people navigate AI career paths in a warm, personalized way.</p></div>
+        <div><p class="meta-label">Description</p><p class="meta-text">Nav is a warm, encouraging AI chatbot that guides users through exploring AI career paths based on their background and goals — asking one question at a time and delivering personalized career path recommendations with concrete first action steps.</p></div>
       </div>
       <div style="margin-bottom:24px;">
         <p class="meta-label">Process</p>
         <div class="process-steps">
-          <div class="process-step"><span class="step-num">1</span><p class="step-text"><strong style="color:var(--text);">LLM Practice (Claude):</strong> Ran a 6-month ML career roadmap prompt across 3 separate conversations. Key lesson: run multiple chats and combine the best elements from each.</p></div>
-          <div class="process-step"><span class="step-num">2</span><p class="step-text"><strong style="color:var(--text);">Custom GPT (Canva):</strong> Used Canva GPT to design an AI career roadmap infographic — every recommendation grounded in design reasoning.</p></div>
-          <div class="process-step"><span class="step-num">3</span><p class="step-text"><strong style="color:var(--text);">STORM AI:</strong> Researched AI in Talent Acquisition — multi-perspective approach produced a balanced article including the Amazon scrapped AI recruiting tool case study.</p></div>
-          <div class="process-step"><span class="step-num">4</span><p class="step-text"><strong style="color:var(--text);">Design Thinking:</strong> Empathy — career changer overwhelmed by AI options. Define — need a judgment-free guide. Ideate — conversational advisor. Prototype — Nav on Chatbase.co. Test — three user backgrounds.</p></div>
-          <div class="process-step"><span class="step-num">5</span><p class="step-text"><strong style="color:var(--text);">Build & Iterate:</strong> Three iterations — added warmth, transferable skills celebration, and step-by-step conversation flow.</p></div>
+          <div class="process-step"><span class="step-num">1</span><p class="step-text"><strong style="color:var(--text);">LLM Practice (Claude):</strong> Ran career roadmap prompt across 3 separate conversations — combined the best elements from each.</p></div>
+          <div class="process-step"><span class="step-num">2</span><p class="step-text"><strong style="color:var(--text);">Custom GPT (Canva):</strong> Used Canva GPT to design AI career roadmap infographic — every recommendation grounded in design reasoning.</p></div>
+          <div class="process-step"><span class="step-num">3</span><p class="step-text"><strong style="color:var(--text);">STORM AI + Design Thinking → Build → Iterate:</strong> Three iterations refined Nav from formal and robotic to warm and genuinely advisory.</p></div>
         </div>
       </div>
       <hr class="artifact-rule">
-      <div style="margin-bottom:20px;">
-        <p class="meta-label">Tools & Technologies</p>
-        <div class="tool-tags"><span class="tool-tag">Claude AI</span><span class="tool-tag">Canva GPT</span><span class="tool-tag">STORM AI</span><span class="tool-tag">Chatbase.co</span><span class="tool-tag">Design Thinking</span><span class="tool-tag">Prompt Engineering</span></div>
-      </div>
-      <div style="margin-bottom:16px;">
-        <p class="meta-label">Try Nav Here</p>
-        <a href="https://www.chatbase.co/ABgUlgyB1kx15Kns8rM9o/help" target="_blank" style="font-family:var(--nunito);font-size:13px;font-weight:700;color:var(--purple);text-decoration:none;background:var(--purple-lt);padding:8px 16px;border-radius:8px;border:1px solid var(--border);display:inline-block;">🤖 Open AI Career Navigator →</a>
-      </div>
-      <div class="vp-block">
-        <p class="meta-label">Value Proposition</p>
-        <p class="meta-text">For organizations evaluating AI/ML talent from non-traditional backgrounds, this artifact demonstrates the ability to identify a real user need, select the right tools, design a human-centered solution, and iterate toward something genuinely useful.</p>
-      </div>
-      <div class="relevance-block">
-        <p class="meta-label">Relevance</p>
-        <p class="meta-text">The professionals who create the most value with AI are those who connect AI capability to human needs. Nav demonstrates exactly that connection — and building it gave me a practical foundation for leading AI adoption in any organizational context.</p>
-      </div>
+      <div style="margin-bottom:16px;"><p class="meta-label">Tools & Technologies</p><div class="tool-tags"><span class="tool-tag">Claude AI</span><span class="tool-tag">Canva GPT</span><span class="tool-tag">STORM AI</span><span class="tool-tag">Chatbase.co</span><span class="tool-tag">Design Thinking</span><span class="tool-tag">Prompt Engineering</span></div></div>
+      <div style="margin-bottom:16px;"><p class="meta-label">Try Nav Here</p><a href="https://www.chatbase.co/ABgUlgyB1kx15Kns8rM9o/help" target="_blank" style="font-family:var(--nunito);font-size:13px;font-weight:700;color:var(--purple);text-decoration:none;background:var(--purple-lt);padding:8px 16px;border-radius:8px;border:1px solid var(--border);display:inline-block;">🤖 Open AI Career Navigator →</a></div>
+      <div class="vp-block"><p class="meta-label">Value Proposition</p><p class="meta-text">Demonstrates the ability to identify a real user need, select the right tools, design a human-centered solution, and iterate toward something genuinely useful. Nav is a bot I would share with anyone asking how to get into AI.</p></div>
+      <div class="relevance-block"><p class="meta-label">Relevance</p><p class="meta-text">The professionals who create the most value with AI are those who connect AI capability to human needs. Nav demonstrates exactly that connection.</p></div>
     </div>
   </div>
 
@@ -262,86 +264,116 @@
       <span class="artifact-badge">Written Analysis</span>
     </div>
     <div class="artifact-body">
-      <p class="artifact-intro">A comparative analysis of machine learning and deep learning through two industry-defining real-world applications — Gmail's spam filter (Logistic Regression) and Google Translate (Transformer models). Written from a business analytics perspective that asks not just "which model works better" but "which model is right for this business problem and this audience."</p>
+      <p class="artifact-intro">A comparative analysis of machine learning and deep learning through two industry-defining real-world applications — Gmail's spam filter (Logistic Regression) and Google Translate (Transformer models). Making the technical distinction immediately relevant to practical business decision-making.</p>
+      <div class="artifact-grid">
+        <div><p class="meta-label">Objective</p><p class="meta-text">To demonstrate the ability to differentiate between ML and DL approaches by grounding the comparison in real business applications that technology leaders and product managers recognize.</p></div>
+        <div><p class="meta-label">Description</p><p class="meta-text">Gmail uses Logistic Regression for spam detection where known features and interpretability needs make traditional ML ideal. Google Translate uses Transformer models where the contextual complexity of language translation across 100+ languages makes deep learning the only viable approach.</p></div>
+      </div>
+      <div style="margin-bottom:24px;">
+        <p class="meta-label">Case Studies</p>
+        <div class="compare-grid">
+          <div class="compare-card"><h5 class="suitable">ML — Gmail Spam (Logistic Regression)</h5><p>Binary classification with well-understood features. Fast, scalable, interpretable. Google can explain why an email was flagged — critical for user trust and compliance (Amazon, n.d.).</p></div>
+          <div class="compare-card"><h5 class="not">DL — Google Translate (Transformer)</h5><p>Language translation requires understanding context and nuance across 100+ language pairs. Transformer models learn automatically through self-attention mechanisms — impossible to manually engineer (Illing, 2024).</p></div>
+        </div>
+      </div>
+      <hr class="artifact-rule">
+      <div style="margin-bottom:16px;"><p class="meta-label">Concepts Demonstrated</p><div class="tool-tags"><span class="tool-tag coral">Logistic Regression</span><span class="tool-tag coral">Transformer Architecture</span><span class="tool-tag">Feature Engineering</span><span class="tool-tag">Model Interpretability</span><span class="tool-tag">NLP</span></div></div>
+      <div class="vp-block"><p class="meta-label">Value Proposition</p><p class="meta-text">For technology leaders and product managers, demonstrates analytical thinking required to select the right AI approach for a given business problem — not just the most impressive one.</p></div>
+      <div class="ref-block"><p class="meta-label" style="margin-bottom:8px;">References</p><p>Amazon. (n.d.). What is machine learning? AWS. https://aws.amazon.com/what-is/machine-learning/</p><p>Illing, S. (2024). A beginner's guide to understanding NLP with GPT. MaestroLabs. https://www.maestrolabs.com/blog-detail/beginners-guide-to-understanding-natural-language-processing-with-gpt</p><p>Trojahn, M., & Costa, B. (2024). What are the differences between AI, ML, DL, and Gen AI? E-core. https://www.e-core.com/na-en/articles/differences-between-ai-ml-dl-gen-ai/</p></div>
+    </div>
+  </div>
+
+  <!-- ARTIFACT 3 -->
+  <div class="artifact">
+    <div class="artifact-header teal-header">
+      <div>
+        <p class="artifact-num">Artifact 03 — Workshop 3 — Discussion 3.4</p>
+        <p class="artifact-title">Neural Networks Explained Simply — AI-Assisted Communication for Learning</p>
+      </div>
+      <span class="artifact-badge">Communication for Learning</span>
+    </div>
+    <div class="artifact-body">
+      <p class="artifact-intro">A carefully crafted simple explanation of neural networks in machine learning — developed in collaboration with Claude AI and grounded in communication science principles including chunking, storytelling, progressive disclosure, and multimodal presentation. Demonstrates the ability to make complex AI concepts accessible to non-technical business audiences.</p>
 
       <div class="artifact-grid">
         <div>
           <p class="meta-label">Objective</p>
-          <p class="meta-text">To demonstrate the ability to differentiate between ML and DL approaches by grounding the comparison in real business applications that technology leaders and product managers recognize — making the technical distinction immediately relevant to practical decision-making.</p>
+          <p class="meta-text">To apply communication for learning strategies — drawn from change leadership and information presentation theory — to explain a complex AI concept (neural networks) in the simplest possible terms, using AI as a collaborative tool in the communication design process.</p>
         </div>
         <div>
           <p class="meta-label">Description</p>
-          <p class="meta-text">The analysis examines Gmail's use of Logistic Regression for spam detection — where known features and interpretability needs make traditional ML ideal — and Google Translate's use of Transformer models — where the contextual complexity of language translation across 100+ languages makes deep learning the only viable approach.</p>
+          <p class="meta-text">Using Einstein's principle — "if you can't explain it simply, you don't understand it well enough" — this artifact produces a layered, analogy-driven explanation of neural networks that a non-technical business professional can understand and remember. The explanation was developed iteratively with Claude AI and refined through multiple drafts.</p>
         </div>
       </div>
 
       <div style="margin-bottom:24px;">
-        <p class="meta-label">Case Study 1 — ML: Gmail Spam Detection (Logistic Regression)</p>
-        <div class="compare-grid">
-          <div class="compare-card">
-            <h5 class="suitable">✓ Why ML is Suitable</h5>
-            <p>Binary classification task with well-understood, human-definable features — keyword frequency, sender reputation, link density. Fast, scalable, and interpretable. Google can explain to users why an email was flagged, building trust. Billions of labeled training examples make it continuously improving without DL overhead (Amazon, n.d.).</p>
-          </div>
-          <div class="compare-card">
-            <h5 class="not">✗ Why Deep Learning is NOT Suitable</h5>
-            <p>Spam detection does not require automatic feature discovery — the features are already known. A deep neural network would waste computational resources, produce less interpretable results, and likely not outperform Logistic Regression on this structured, well-labeled classification task.</p>
-          </div>
+        <p class="meta-label">The Simple Explanation — Neural Networks</p>
+        <div class="explanation-box">
+          <p>🧠 <span class="highlight">Imagine you are training a new employee.</span></p>
+          <p>On their first day, you give them a stack of customer emails and say: <em>"Sort these into two piles — complaints and compliments."</em></p>
+          <p>They guess. They get some right, some wrong. You correct them. They adjust. They try again. They get a little better. You do this hundreds of times. Eventually — without you ever writing down a rule — they just <em>know</em>. They have learned the patterns from experience.</p>
+          <p><span class="highlight">That is a neural network.</span></p>
+          <p>It is not programmed with rules. It is trained with examples. It makes guesses, gets corrected, and adjusts — over and over — until it gets reliably good at recognizing patterns.</p>
+          <p>The "neurons" are tiny decision-makers arranged in layers. Each one takes information in, does a small calculation, and passes a signal forward. The layers work together — the first might notice individual words, the next notices phrases, the next notices tone. Together they figure out: complaint or compliment?</p>
         </div>
       </div>
 
       <div style="margin-bottom:24px;">
-        <p class="meta-label">Case Study 2 — Deep Learning: Google Translate (Transformer)</p>
-        <div class="compare-grid">
-          <div class="compare-card">
-            <h5 class="suitable">✓ Why DL is Suitable</h5>
-            <p>Language translation requires understanding context, meaning, and linguistic nuance across 100+ language pairs. Transformer models automatically learn representations through self-attention mechanisms — enabling contextually accurate translations that no human could manually engineer features for (Illing, 2024).</p>
-          </div>
-          <div class="compare-card">
-            <h5 class="not">✗ Why Traditional ML is NOT Suitable</h5>
-            <p>ML would require manually engineering thousands of keyword features for every language pair — a brittle, impossible approach that cannot capture long-range dependencies or the kind of linguistic nuance that determines meaning in natural language translation.</p>
-          </div>
+        <p class="meta-label">Communication Strategies Applied</p>
+        <div class="strategy-grid">
+          <div class="strategy-card"><h6>Chunking</h6><p>Broke the concept into three digestible moments: the analogy, the correction loop, and the layer explanation. No cognitive overload.</p></div>
+          <div class="strategy-card"><h6>Storytelling</h6><p>The new employee scenario makes an abstract technical concept feel human and familiar — giving the reader a mental hook they can hold onto.</p></div>
+          <div class="strategy-card"><h6>Progressive Disclosure</h6><p>Started with the simplest version (training with examples) before introducing the layer structure. Foundation first, complexity second.</p></div>
+          <div class="strategy-card"><h6>Relevance & Context</h6><p>Connected neural networks to something everyone understands — learning from feedback. That is the "why it makes sense" moment that makes new information stick.</p></div>
+          <div class="strategy-card"><h6>Multimodal Thinking</h6><p>Used emoji, bold formatting, and italic emphasis to create visual breaks and guide the reader's eye rather than presenting a wall of text.</p></div>
+          <div class="strategy-card"><h6>AI Collaboration</h6><p>Used Claude to test clarity, identify hidden technical assumptions, and refine analogy selection across multiple drafts before finalizing.</p></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:24px;">
+        <p class="meta-label">AI-Assisted Process</p>
+        <div class="process-steps">
+          <div class="process-step"><span class="step-num teal">1</span><p class="step-text"><strong style="color:var(--text);">Initial Draft:</strong> Wrote a first explanation of neural networks — too technical, too many assumptions about prior knowledge.</p></div>
+          <div class="process-step"><span class="step-num teal">2</span><p class="step-text"><strong style="color:var(--text);">Claude Collaboration:</strong> Asked Claude to identify where the explanation was still assuming knowledge the reader might not have. Claude flagged terms like "parameters" and "weights" that needed either removal or analogy replacement.</p></div>
+          <div class="process-step"><span class="step-num teal">3</span><p class="step-text"><strong style="color:var(--text);">Analogy Testing:</strong> Tested three different analogies — recipe following, animal training, and new employee training. The new employee scenario scored highest on relatability for a business professional audience.</p></div>
+          <div class="process-step"><span class="step-num teal">4</span><p class="step-text"><strong style="color:var(--text);">Final Refinement:</strong> Stripped out every remaining technical term that was not essential. The final version is shorter and clearer than anything I would have written alone.</p></div>
         </div>
       </div>
 
       <hr class="artifact-rule">
 
       <div style="margin-bottom:20px;">
-        <p class="meta-label">Concepts Demonstrated</p>
+        <p class="meta-label">Skills & Tools Demonstrated</p>
         <div class="tool-tags">
-          <span class="tool-tag">Supervised Learning</span>
-          <span class="tool-tag">Logistic Regression</span>
-          <span class="tool-tag coral">Transformer Architecture</span>
-          <span class="tool-tag coral">Natural Language Processing</span>
-          <span class="tool-tag">Feature Engineering</span>
-          <span class="tool-tag">Model Interpretability</span>
+          <span class="tool-tag teal">AI Explainability</span>
+          <span class="tool-tag teal">Claude AI Collaboration</span>
+          <span class="tool-tag teal">Communication for Learning</span>
+          <span class="tool-tag teal">Prompt Engineering</span>
+          <span class="tool-tag">Neural Networks</span>
+          <span class="tool-tag">Change Leadership Communication</span>
+          <span class="tool-tag">Analogy Design</span>
         </div>
       </div>
 
-      <div class="vp-block">
+      <div class="vp-block teal">
         <p class="meta-label">Value Proposition</p>
-        <p class="meta-text">For technology leaders and product managers, this artifact demonstrates the analytical thinking required to select the right AI approach for a given business problem — not just the most impressive one. Gmail and Google Translate are tools that billions of people use daily. Understanding why each uses a fundamentally different AI architecture — and being able to explain that difference to a non-technical audience — is exactly the kind of business-focused AI literacy that my target audience needs in their teams.</p>
+        <p class="meta-text">For business leaders and technology organizations, the ability to explain AI concepts simply is not a soft skill — it is a strategic capability. AI adoption fails when employees cannot understand what a system does or why it makes the decisions it makes. A professional who can bridge that communication gap — who can make neural networks feel as intuitive as training a new employee — accelerates adoption, reduces resistance, and builds the organizational trust that AI initiatives require to succeed. This artifact demonstrates exactly that capability, applied deliberately and with AI as a collaborative partner.</p>
       </div>
 
       <div style="margin:16px 0;">
         <p class="meta-label">Unique Value</p>
-        <p class="meta-text">My business analytics background shaped this analysis around a question technical analysts often skip: interpretability. For Gmail, the ability to explain why an email was flagged is not just a nice feature — it is a trust and compliance requirement. Framing that interpretability need as a business constraint — not just a technical preference — is something a business analyst brings to AI decision-making that a pure ML engineer might miss.</p>
+        <p class="meta-text">My business analytics background made me acutely aware of the audience for this explanation. When I present data findings to non-technical stakeholders, the analogy I choose determines whether they engage or disengage. The new employee scenario works because every business professional has trained someone — they already understand the feedback loop, the gradual improvement, the eventual independence. I did not find that analogy by accident. I found it by thinking about my audience first.</p>
       </div>
 
-      <div class="relevance-block">
+      <div class="relevance-block teal">
         <p class="meta-label">Relevance</p>
-        <p class="meta-text">Every organization deploying AI will face the ML vs. DL decision — for customer segmentation, for content moderation, for translation, for recommendation. The ability to match the right approach to the right problem, explain that decision to stakeholders, and avoid over-engineering for the sake of technical sophistication is what makes AI initiatives succeed in practice rather than just in theory.</p>
-      </div>
-
-      <div class="ref-block">
-        <p class="meta-label" style="margin-bottom:8px;">References</p>
-        <p>Amazon. (n.d.). <em>What is machine learning?</em> AWS. https://aws.amazon.com/what-is/machine-learning/</p>
-        <p>Illing, S. (2024, September 20). A beginner's guide to understanding natural language processing with GPT. <em>MaestroLabs</em>. https://www.maestrolabs.com/blog-detail/beginners-guide-to-understanding-natural-language-processing-with-gpt</p>
-        <p>Trojahn, M., & Costa, B. (2024, August 28). What are the differences between AI, ML, DL, and Gen AI? <em>E-core</em>. https://www.e-core.com/na-en/articles/differences-between-ai-ml-dl-gen-ai/</p>
+        <p class="meta-text">Organizations are deploying neural networks in recommendation systems, fraud detection, predictive analytics, and customer service — and most employees who interact with these systems have no idea how they work. Closing that understanding gap is not just a communication task. It is a change management task. This artifact demonstrates I can do both — explain the technology clearly and use the communication principles that make explanations stick in a change leadership context.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="section-wrap" id="experience">
   <p class="section-eyebrow">03 — Background</p>
   <h2 class="section-title">Education & Background</h2>
@@ -351,10 +383,10 @@
       <span class="exp-date">2025 — Present</span>
     </div>
     <ul class="exp-bullets">
-      <li>Completing AIML-501: Model Development — exploring ML fundamentals, AI ethics, and intelligent systems design.</li>
-      <li>Building hands-on experience with LLMs, custom GPTs, STORM AI, and chatbot platforms.</li>
-      <li>Applying Design Thinking frameworks to AI product development.</li>
-      <li>Developing professional portfolio demonstrating practical AI/ML capabilities.</li>
+      <li>Completing AIML-501: Model Development — exploring ML fundamentals, deep learning, neural networks, AI ethics, and intelligent systems design.</li>
+      <li>Building hands-on experience with LLMs, custom GPTs, STORM AI, chatbot platforms, and AI communication tools.</li>
+      <li>Applying Design Thinking and communication science frameworks to AI product development.</li>
+      <li>Developing professional portfolio demonstrating practical AI/ML capabilities across three workshops.</li>
     </ul>
   </div>
   <p class="section-eyebrow" style="margin-top:40px;margin-bottom:20px;">Education</p>
@@ -363,12 +395,13 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="section-wrap" id="contact">
   <p class="section-eyebrow">04 — Get In Touch</p>
   <h2 class="section-title">Contact</h2>
   <div class="contact-card">
     <h3>Let's Connect! 👋</h3>
-    <p>Currently pursuing my MS in AI/ML at Indiana Wesleyan University. I am passionate about connecting AI capability with real business needs and always open to conversations about AI adoption, career transitions into AI, and human-centered AI design.</p>
+    <p>Currently pursuing my MS in AI/ML at Indiana Wesleyan University. Passionate about connecting AI capability with real business needs and always open to conversations about AI adoption, career transitions into AI, and human-centered AI design.</p>
     <div class="contact-links">
       <a href="https://github.com/sb9597213/portfolio" class="contact-link">⚙ GitHub Portfolio</a>
       <a href="https://www.chatbase.co/ABgUlgyB1kx15Kns8rM9o/help" class="contact-link">🤖 Try Nav — AI Career Bot</a>
